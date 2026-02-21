@@ -11,7 +11,24 @@ export default function ProposalPage() {
           </div>
           <h1 className="text-2xl font-bold">{profile.name}</h1>
           <p className="text-sm text-muted-foreground mt-1">{profile.tagline}</p>
-          <p className="text-sm mt-4 leading-relaxed max-w-2xl mx-auto">
+
+          {/* Social proof stats */}
+          <div className="flex justify-center gap-6 mt-4">
+            <div className="text-center">
+              <div className="text-lg font-bold text-primary">40+</div>
+              <div className="text-xs text-muted-foreground">Projects Shipped</div>
+            </div>
+            <div className="text-center">
+              <div className="text-lg font-bold text-primary">11</div>
+              <div className="text-xs text-muted-foreground">Industries</div>
+            </div>
+            <div className="text-center">
+              <div className="text-lg font-bold text-primary">&lt;48hr</div>
+              <div className="text-xs text-muted-foreground">Demo Turnaround</div>
+            </div>
+          </div>
+
+          <p className="text-sm mt-6 leading-relaxed max-w-2xl mx-auto">
             {profile.bio}
           </p>
         </div>
@@ -73,7 +90,7 @@ export default function ProposalPage() {
         {/* Skills Grid */}
         <div>
           <h2 className="text-lg font-semibold mb-4">Skills</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {profile.skillCategories.map((category) => (
               <div key={category.name} className="rounded-xl border bg-card p-4 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-200">
                 <h3 className="text-sm font-medium mb-2">{category.name}</h3>
@@ -96,7 +113,9 @@ export default function ProposalPage() {
         <div className="text-center py-8 rounded-xl bg-primary/5 border border-primary/20">
           <h2 className="text-lg font-semibold">Let&apos;s build this together</h2>
           <p className="text-sm text-muted-foreground mt-1 max-w-md mx-auto">
-            This demo is just the starting point. I can have the production version scoped and started within days.
+            This demo shows the admin dashboard — I can scope the full underwriting
+            engine (rules, DRS, document pipeline, audit trail) and have Phase 1
+            architecture ready within a week.
           </p>
           <p className="text-sm font-medium text-primary mt-4">— Humam</p>
         </div>
